@@ -92,17 +92,17 @@ const home = defineCollection({
     }),
 });
 
-const indexCards = defineCollection({
-  loader: glob({
-    pattern: "-index.{md,mdx}",
-    base: "./src/content/index-cards",
-  }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    cards: z.array(z.string()),
-  }),
-});
+// const indexCards = defineCollection({
+//   loader: glob({
+//     pattern: "-index.{md,mdx}",
+//     base: "./src/content/index-cards",
+//   }),
+//   schema: z.object({
+//     title: z.string(),
+//     description: z.string(),
+//     cards: z.array(z.string()),
+//   }),
+// });
 
 const poetry = defineCollection({
   loader: glob({ pattern: "**\/[^_]*.{md,mdx}", base: "./src/content/poetry" }),
@@ -169,7 +169,7 @@ export const collections = {
   blog,
   docs,
   home,
-  indexCards,
+  //indexCards,
   poetry,
   portfolio,
   recipes,
